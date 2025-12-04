@@ -21,7 +21,7 @@ const courses = [
     title: "Онлайн-платежи",
     description: "Безопасные методы оплаты и защита ваших данных.",
     lessons: 5,
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1764864504/vid%D0%B0%D1%8B%D0%B0%D1%8Beo_ualjks.mp4",
   },
 ];
 
