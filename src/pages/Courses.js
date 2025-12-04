@@ -14,7 +14,7 @@ const courses = [
     title: "Фишинг и соцсети",
     description: "Как не попасться на уловки мошенников в соцсетях и почте.",
     lessons: 6,
-    video: "https://ok.ru/video/9252562930372",
+    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1764864116/1105_1_yttcrd.mp4",
   },
   {
     id: 3,
