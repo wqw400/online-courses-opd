@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const courses = [
  {
     id: 1,
-<<<<<<< HEAD
     category: "Фишинг и его разновидности",
     title: "Классический фишинг",
     description: "Разбираем массовые рассылки и поддельные сайты, чтобы вы могли их распознавать.",
