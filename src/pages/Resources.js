@@ -232,12 +232,30 @@ export default function Articles() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
+  const categories = [...new Set(articles.map(a => a.category))];
+
   const filteredArticles = selectedCategory 
     ? articles.filter(a => a.category === selectedCategory)
     : articles;
 
   return (
     <div className="relative min-h-screen bg-[#0a0a0f] text-white pt-32 pb-24 px-6 overflow-hidden">
+
+      {/* Фоновые свечения */}
+      <div className="pointer-events-none fixed inset-0 -z-10">
+        <div className="absolute top-[-250px] right-[-300px] w-[700px] h-[700px] bg-purple-700 opacity-25 blur-[200px] rounded-full"></div>
+        <div className="absolute bottom-[-250px] left-[-300px] w-[700px] h-[700px] bg-indigo-600 opacity-25 blur-[200px] rounded-full"></div>
+      </div>
+
+      {/* Заголовок */}
+      <motion.h1
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-4xl md:text-6xl font-extrabold text-center drop-shadow-xl mb-16"
+      >
+        Статьи и материалы
+      </motion.h1>
 
       {/* Кнопки категорий */}
       <div className="mb-12 flex flex-wrap justify-center gap-4">
@@ -246,8 +264,7 @@ export default function Articles() {
           className={`px-6 py-3 font-bold rounded-xl transition-all
             ${selectedCategory === null 
               ? "bg-yellow-400 text-gray-900 shadow-[0_0_20px_rgba(255,255,150,0.6)]" 
-              : "bg-white/10 text-gray-200 hover:bg-white/20"}
-          `}
+              : "bg-white/10 text-gray-200 hover:bg-white/20"}`}
         >
           Все категории
         </button>
@@ -259,8 +276,7 @@ export default function Articles() {
             className={`px-6 py-3 font-bold rounded-xl transition-all
               ${selectedCategory === cat 
                 ? "bg-yellow-400 text-gray-900 shadow-[0_0_20px_rgba(255,255,150,0.6)]" 
-                : "bg-white/10 text-gray-200 hover:bg-white/20"}
-            `}
+                : "bg-white/10 text-gray-200 hover:bg-white/20"}`}
           >
             {cat}
           </button>
@@ -286,49 +302,7 @@ export default function Articles() {
         ))}
       </div>
 
-      {/* Модальное окно */}
-=======
-  const [selectedArticle, setSelectedArticle] = useState(null);
-
-  return (
-    <div className="relative min-h-screen bg-[#0a0a0f] text-white pt-32 pb-24 px-6 overflow-hidden">
-      
-      {/* Фоновые свечения */}
-      <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute top-[-250px] right-[-300px] w-[700px] h-[700px] bg-purple-700 opacity-25 blur-[200px] rounded-full"></div>
-        <div className="absolute bottom-[-250px] left-[-300px] w-[700px] h-[700px] bg-indigo-600 opacity-25 blur-[200px] rounded-full"></div>
-      </div>
-
-      <motion.h1
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-4xl md:text-6xl font-extrabold text-center drop-shadow-xl mb-16"
-      >
-        Статьи и материалы
-      </motion.h1>
-
-      {/* Сетка статей */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((article, i) => (
-          <motion.div
-            key={article.id}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: i * 0.1 }}
-            whileHover={{ scale: 1.02 }}
-            onClick={() => setSelectedArticle(article)}
-            className="cursor-pointer bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-xl hover:shadow-[0_0_40px_rgba(100,100,255,0.4)] transition-all"
-          >
-            <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
-            <p className="text-gray-300 text-sm">{article.category}</p>
-          </motion.div>
-        ))}
-      </div>
-
       {/* Модальное окно статьи */}
->>>>>>> f4a29038c81499de83a777213f4a241d8352d395
       <AnimatePresence>
         {selectedArticle && (
           <motion.div
