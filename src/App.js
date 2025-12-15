@@ -5,9 +5,10 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import Resources from "./pages/Resources";
+import FinalTest from "./pages/FinalTest"; // <-- default import
+
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Profile from "./pages/Profile"; // личный кабинет
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
             <Route path="/resources" element={<Resources />} /> 
             <Route path="/login" element={<Login />} />    
             <Route path="/register" element={<Register />} /> 
-            <Route path="/profile" element={<Profile />} /> {/* Личный кабинет */}
+   
+            <Route path="/test" element={<FinalTest />} /> {/* Тест */}
           </Routes>
         </main>
 

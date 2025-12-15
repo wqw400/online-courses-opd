@@ -9,7 +9,7 @@ export default function Header() {
     { name: "Главная", path: "/" },
     { name: "Курсы", path: "/courses" },
     { name: "Статьи", path: "/resources" },
-    { name: "Профиль", path: "/profile" },
+    { name: "Тест", path: "/test" },
   ];
 
   return (
@@ -54,20 +54,6 @@ export default function Header() {
               )}
             </motion.div>
           ))}
-
-          {/* Кнопки */}
-          <Link
-            to="/login"
-            className="px-3 py-2 bg-white text-[#0a0a0f] font-semibold rounded-lg hover:bg-gray-100 transition"
-          >
-            Войти
-          </Link>
-          <Link
-            to="/register"
-            className="px-3 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-300 transition"
-          >
-            Регистрация
-          </Link>
         </nav>
       </div>
     </motion.header>
