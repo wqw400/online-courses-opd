@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const courses = [
- {
+  {
     id: 1,
     category: "Фишинг и его разновидности",
     title: "Классический фишинг",
@@ -85,25 +85,11 @@ const courses = [
     title: "Фейковые антивирусы (Rogueware / Scareware)",
     description: "Разбор мошеннических программ, маскирующихся под антивирус.",
     video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1765799486/IMG_0416_lakmkb.mp4",
-=======
-    title: "Основы интернет-безопасности",
-    description: "Научитесь распознавать мошеннические схемы и защищать себя.",
-    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1764866898/default_pc6cfq.mp4",
-  },
-  {
-    id: 2,
-    title: "Фишинг и соцсети",
-    description: "Как не попасться на уловки мошенников в соцсетях и почте.",
-    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1764864116/1105_1_yttcrd.mp4",
-  },
-  {
-    id: 3,
-    title: "Онлайн-платежи",
-    description: "Безопасные методы оплаты и защита ваших данных.",
-    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1764864504/vid%D0%B0%D1%8B%D0%B0%D1%8Beo_ualjks.mp4",
->>>>>>> f4a29038c81499de83a777213f4a241d8352d395
   },
 ];
+
+export default courses;
+
 
 export default function Courses() {
   const [selectedCategory, setSelectedCategory] = useState("Все");
