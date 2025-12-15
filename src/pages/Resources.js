@@ -229,7 +229,6 @@ const articles = [
 const categories = [...new Set(articles.map(a => a.category))];
 
 export default function Articles() {
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
