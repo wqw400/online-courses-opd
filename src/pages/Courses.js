@@ -88,9 +88,6 @@ const courses = [
   },
 ];
 
-export default courses;
-
-
 export default function Courses() {
   const [selectedCategory, setSelectedCategory] = useState("Все");
   const [selectedCourse, setSelectedCourse] = useState(null);
