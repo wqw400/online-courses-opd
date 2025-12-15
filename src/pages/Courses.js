@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const courses = [
  {
     id: 1,
+<<<<<<< HEAD
     category: "Фишинг и его разновидности",
     title: "Классический фишинг",
     description: "Разбираем массовые рассылки и поддельные сайты, чтобы вы могли их распознавать.",
@@ -85,10 +86,28 @@ const courses = [
     title: "Фейковые антивирусы (Rogueware / Scareware)",
     description: "Разбор мошеннических программ, маскирующихся под антивирус.",
     video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1765799486/IMG_0416_lakmkb.mp4",
+=======
+    title: "Основы интернет-безопасности",
+    description: "Научитесь распознавать мошеннические схемы и защищать себя.",
+    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1764866898/default_pc6cfq.mp4",
+  },
+  {
+    id: 2,
+    title: "Фишинг и соцсети",
+    description: "Как не попасться на уловки мошенников в соцсетях и почте.",
+    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1764864116/1105_1_yttcrd.mp4",
+  },
+  {
+    id: 3,
+    title: "Онлайн-платежи",
+    description: "Безопасные методы оплаты и защита ваших данных.",
+    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1764864504/vid%D0%B0%D1%8B%D0%B0%D1%8Beo_ualjks.mp4",
+>>>>>>> f4a29038c81499de83a777213f4a241d8352d395
   },
 ];
 
 export default function Courses() {
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState("Все");
   const [selectedCourse, setSelectedCourse] = useState(null);
 
@@ -96,6 +115,10 @@ export default function Courses() {
 
   const filteredCourses = selectedCategory === "Все" ? courses : courses.filter(c => c.category === selectedCategory);
 
+=======
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+>>>>>>> f4a29038c81499de83a777213f4a241d8352d395
   return (
     <div className="relative min-h-screen bg-[#0a0a0f] text-white pt-32 pb-24 px-6 overflow-hidden">
 
@@ -139,6 +162,7 @@ export default function Courses() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             transition={{ duration: 0.8, delay: i * 0.1 }}
             whileHover={{ scale: 1.02, boxShadow: "0 0 40px rgba(255,255,100,0.5)" }}
             onClick={() => setSelectedCourse(course)}
@@ -146,6 +170,21 @@ export default function Courses() {
           >
             <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
             <p className="text-gray-300">{course.description}</p>
+=======
+            transition={{ duration: 0.8, delay: i * 0.2 }}
+            whileHover={{ scale: 1.04 }}
+            className="
+              bg-white/10 backdrop-blur-xl border border-white/10
+              rounded-2xl p-6 shadow-xl cursor-pointer
+              hover:shadow-[0_0_40px_rgba(100,100,255,0.4)]
+              transition-all
+            "
+            onClick={() => setSelectedCourse(course)}
+          >
+            <h2 className="text-2xl font-semibold mb-3">{course.title}</h2>
+            <p className="text-gray-300 mb-3">{course.description}</p>
+            <p className="text-sm text-gray-400 mb-4">Кол-во уроков: {course.lessons}</p>
+>>>>>>> f4a29038c81499de83a777213f4a241d8352d395
           </motion.div>
         ))}
       </div>
