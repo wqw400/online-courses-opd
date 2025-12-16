@@ -63,7 +63,7 @@ const courses = [
     category: "Взломы и несанкционированный доступ",
     title: "Кредитное мошенничество (Carding)",
     description: "Обучение распознаванию кражи платежных данных и защите финансовой информации.",
-    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1765799393/IMG_0414_k7kviu.mp4",
+    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1765901184/IMG_5318_fe8kng.mp4",
   },
   {
     id: 10,
