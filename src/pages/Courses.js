@@ -70,7 +70,7 @@ const courses = [
     category: "Социальная инженерия и обман",
     title: "Кража цифровых личностей (Account Takeover)",
     description: "Как защитить аккаунты в соцсетях, почте и играх.",
-    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1765800392/IMG_0420_hlyrlu.mp4",
+    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1765901076/IMG_5317_ubtbos.mp4",
   },
   {
     id: 11,
