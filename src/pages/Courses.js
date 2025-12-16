@@ -7,7 +7,7 @@ const courses = [
     category: "Фишинг и его разновидности",
     title: "Классический фишинг",
     description: "Разбираем массовые рассылки и поддельные сайты, чтобы вы могли их распознавать.",
-    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1765800128/IMG_0418_t4fq1f.mp4",
+    video: "https://res.cloudinary.com/dxypdd3yn/video/upload/v1765900794/IMG_5315_f6sspy.mp4",
   },
   {
     id: 2,
