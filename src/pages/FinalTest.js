@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const questions = [
+   {
+    question: "На каком курсе вы обучаетесь?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "4",
+    ],
+      correct: 1,2,3,4,
+  },
   {
     question: "Что является главной целью классического фишинга?",
     options: [
